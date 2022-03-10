@@ -1,0 +1,139 @@
+.box {
+  button {
+    background: rgba(0, 119, 200, 1);
+  }
+  &-list-cv {
+    padding: 0 24px;
+  }
+  &-button {
+    button {
+      margin: 0 5px;
+      text-transform: uppercase;
+      background: rgba(0, 119, 200, 1);
+    }
+    :first-child {
+      margin-left: 0;
+    }
+    :last-child {
+      margin-right: 0;
+    }
+  }
+  &-history {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-height: 70px;
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+    h2 {
+      margin-bottom: 0;
+    }
+    &-btn {
+      cursor: pointer;
+      border: 0;
+      margin-right: 18px;
+    }
+  }
+}
+
+.cv {
+  button {
+    background: rgba(0, 119, 200, 1);
+  }
+  margin-top: 20px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding-bottom: 100px;
+  display: flex;
+  gap: 120px;
+  &-image {
+    padding-left: 42px;
+    text-align: center;
+    .image-show {
+      img {
+        margin-top: 38px;
+        width: 251px;
+        height: 251px;
+      }
+    }
+    .image-change {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin: 20px 0 16px;
+      img {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        :hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    .image-psyco {
+      button {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &-detail {
+    flex: 1;
+    margin-top: 35px;
+    display: flex;
+    margin-right: 60px;
+    flex-direction: column;
+    position: relative;
+    gap: 12px;
+    .btn-edit {
+      position: absolute;
+      right: -16px;
+      top: -10px;
+    }
+    &__infor {
+      display: flex;
+      align-items: flex-start;
+      p {
+        width: 137px;
+        margin-bottom: 0;
+        flex-shrink: 0;
+      }
+      h4,
+      a {
+        margin-left: 10px;
+        margin-bottom: 0;
+      }
+      .description-limit {
+        word-break: break-word;
+        font-weight: 400;
+      }
+    }
+    &__actions {
+      float: right;
+      margin: 0 auto;
+      margin-right: 42px;
+    }
+  }
+  &-history {
+    margin-top: 45px;
+    box-shadow: -18px 0px 0px -17px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.box-list {
+  .table-container__button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+    .icon-table + .icon-table {
+      margin-left: 17px;
+    }
+    .icon-table {
+      cursor: pointer;
+    }
+  }
+  .fullscreen-box {
+    background: #fff;
+    overflow-y: auto;
+  }
+}

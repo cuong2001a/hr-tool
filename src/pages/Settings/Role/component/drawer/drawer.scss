@@ -1,0 +1,35 @@
+.add-role {
+  .ant-drawer-content-wrapper {
+    width: 585px !important;
+  }
+  .ant-drawer-close {
+    order: 1;
+  }
+  .role-permission__label {
+    margin-bottom: 0;
+  }
+}
+
+.permission-box {
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 440px;
+  overflow-y: auto;
+  padding: 10px;
+  .ant-checkbox-group {
+    width: 100%;
+  }
+  table {
+    text-align: center;
+    width: 100% !important;
+    tr {
+      height: 30px;
+    }
+    .thead-title {
+      width: 30%;
+    }
+    .text-left {
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+.site-layout-background .main__content {
+  background: #fff !important;
+}
+
+.ant-modal-footer {
+  text-align: unset !important;
+}
+.ant-drawer-footer {
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+.ant-page-header-heading-title {
+  font-weight: 500 !important;
+}
+.ant-drawer-close {
+  order: 1;
+  color: #000 !important;
+  padding-right: 0;
+}
+.d-flex {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+.pr-10 {
+  padding-right: 10px;
+}
+.btn {
+  display: block;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  height: 40px;
+  line-height: 40px;
+  border: transparent 1px solid;
+  transition: 0.2s;
+}
+.btn:hover {
+  border: #7484fc 1px solid;
+}
+
+.main__content {
+  background-color: #fff;
+  padding-top: 64px;
+  padding-left: 200px;
+}
+
+.p-2 {
+  padding: 5px 25px;
+}
+.text-truncate {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.button-header {
+  text-transform: uppercase;
+}
+
+.ant-page-header {
+  padding: 16px 24px !important;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05) !important;
+}
+.pointer {
+  cursor: pointer;
+}
+.drawer-add {
+  .ant-drawer-content-wrapper {
+    width: 446px !important;
+  }
+  .ant-drawer-close {
+    order: 1;
+  }
+  .ant-drawer-body {
+    padding: 16px 21px 50px 22px !important;
+  }
+  .ant-drawer-header {
+    padding: 21px 26px 21px 22px !important;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+  }
+  .ant-drawer-title {
+    line-height: 21px;
+  }
+  .ant-form-item {
+    margin-bottom: 12px !important;
+    .ant-form-item-label {
+      padding: 0;
+    }
+  }
+  .ant-form-item-required::before {
+    display: none !important;
+  }
+}

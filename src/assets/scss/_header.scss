@@ -1,0 +1,46 @@
+.header {
+  width: 100%;
+  padding: 0 16px;
+  background: rgba(0, 21, 41, 0.9);
+  box-shadow: inset 0px -1px 0px #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  & a {
+    text-decoration: none;
+    color: #fff !important;
+  }
+
+  &__logo {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+    text-transform: uppercase;
+    & > a > span {
+      margin: 0 12px;
+    }
+  }
+  &__add {
+    display: flex;
+
+    &--actions {
+      color: #fff !important;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 25px;
+      margin-left: 20px;
+    }
+    &--user .user__info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 8px;
+    }
+  }
+}

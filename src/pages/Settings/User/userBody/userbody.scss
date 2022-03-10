@@ -1,0 +1,72 @@
+.user-setting__body {
+  padding-left: 24px;
+  padding-right: 16px;
+  .table-container {
+    .text-truncate {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      word-break: break-word;
+    }
+    padding: 14px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    display: flex;
+    flex-direction: column;
+    margin: 13px 0px;
+    .ant-table-thead {
+      height: 56px !important;
+    }
+    .ant-table-row {
+      height: 56px !important;
+    }
+    .table-container__button {
+      justify-content: flex-end;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+
+      .icon-table {
+        cursor: pointer;
+      }
+      .icon-table + .icon-table {
+        margin-left: 15px;
+      }
+    }
+  }
+  .fullscreen-enabled {
+    padding: 20px;
+    overflow: auto;
+    background-color: rgb(255, 255, 255);
+    .table-container__button {
+      display: none !important;
+    }
+  }
+  .pagination {
+    margin-top: 60px !important;
+    margin-bottom: 0 !important;
+    margin-right: 0px !important;
+    text-align: right;
+  }
+}
+
+.ant-drawer-close {
+  margin: 0 !important;
+}
+.check-icon {
+  font-size: 20px;
+  color: #78be20;
+}
+.close-icon {
+  font-size: 20px;
+  color: #f94144;
+}
+
+.user__action {
+  min-width: 120px;
+}
+.ant-popover-inner-content {
+  padding: 0 !important;
+}

@@ -1,0 +1,16 @@
+// Fix giao diện chung
+.ant-form-item-required::before {
+  content: '' !important;
+  display: none !important;
+}
+
+.ant-drawer-close {
+  order: 1;
+  color: #000;
+}
+
+.field--required {
+  span {
+    color: red;
+  }
+}

@@ -1,0 +1,82 @@
+.sidebar {
+  $active-color: rgba(0, 119, 200, 0.85);
+  $second-color: #000000d9;
+  width: 200px;
+  height: calc(100vh - 64px);
+  box-shadow: 4px 0px 5px rgba(0, 0, 0, 0.05);
+  position: fixed;
+  left: 0;
+  top: 64px;
+  bottom: 0;
+  z-index: 10;
+  overflow: auto;
+  background: transparent !important;
+  &__menu {
+    height: 100%;
+  }
+
+  .sidebar__menu {
+    & > li.ant-menu-item.ant-menu-item-selected {
+      color: $active-color;
+      & > span path {
+        fill: $active-color;
+      }
+
+      & > .ant-menu-title-content > a {
+        color: $active-color;
+      }
+    }
+    .ant-menu-item-selected::after {
+      content: '';
+      opacity: 0;
+    }
+
+    .ant-menu-item-active a:hover {
+      color: #000000d9;
+    }
+
+    & > .ant-menu-item.ant-menu-item-active {
+      border: 1px solid $active-color;
+
+      & path {
+        fill: #000000d9;
+      }
+    }
+  }
+
+  .sidebar__subMenu {
+    .ant-menu-item-active a:hover {
+      color: #000;
+    }
+
+    .ant-menu-item:hover::before {
+      content: '';
+      display: block;
+      width: 2px;
+      height: 100%;
+      background-color: #1890ff;
+      position: absolute;
+      right: 0;
+    }
+  }
+
+  .ant-menu-submenu {
+    & > ul > li.ant-menu-item::after {
+      opacity: 1;
+    }
+  }
+
+  .border-radius-hover:hover {
+    border: 1px solid #0077c8;
+  }
+
+  ul.ant-menu-root > li.ant-menu-item.ant-menu-item-selected {
+    .ant-menu-item::after {
+      opacity: 1;
+    }
+  }
+
+  .ant-menu-submenu-inline {
+    border: none;
+  }
+}

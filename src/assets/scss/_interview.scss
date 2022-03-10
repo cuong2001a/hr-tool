@@ -1,0 +1,132 @@
+.interview {
+  height: 100%;
+  .interview-content {
+    height: calc(100% - 37px);
+    padding-top: 17px;
+    padding-bottom: 20px;
+    // HR-interview
+    .hr-review {
+      height: 100%;
+      &__form {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .wrapper--horizontal {
+          display: flex;
+          justify-content: space-between;
+          .hr-review__form-onboard {
+            width: 183px;
+            .ant-picker {
+              width: 183px;
+            }
+          }
+        }
+        &-btn {
+          margin-bottom: 0 !important;
+          button {
+            float: right;
+          }
+        }
+        &-rate {
+          .ant-form-item-label {
+            font-weight: bold;
+            text-decoration: underline;
+            margin-bottom: 10px;
+          }
+        }
+        .ant-form-item-label {
+          padding: 0px !important;
+        }
+        .ant-form-item:not(:last-child) {
+          margin-bottom: 12px !important;
+        }
+      }
+    }
+    // Tech-interview
+    .tech-review {
+      .wrapper--horizontal {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+        input {
+          padding: 4px 0 !important;
+          text-align: center;
+        }
+        label {
+          color: rgba(0, 0, 0, 0.5);
+        }
+        .ant-row.ant-form-item {
+          margin-bottom: 0 !important;
+          flex-direction: row;
+          .ant-form-item-label {
+            display: flex;
+            align-items: center;
+            margin-right: 33px;
+          }
+          .ant-input {
+            width: 34px;
+          }
+        }
+      }
+
+      .tech-interview-submit {
+        margin-top: 107px;
+        padding-bottom: 20px;
+        float: right;
+      }
+
+      .ant-form-item-label {
+        padding: 0px !important;
+      }
+      .ant-form-item:not(:last-child) {
+        margin-bottom: 12px !important;
+      }
+
+      // disable number input spin box
+      /* For Firefox */
+
+      input[type='number'] {
+        -moz-appearance: textfield;
+      }
+
+      /* Webkit browsers like Safari and Chrome */
+
+      input[type='number']::-webkit-inner-spin-button,
+      input[type='number']::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  .ant-menu-overflow::after {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 12px;
+    top: -12px;
+    z-index: 1000;
+    background-color: #fff;
+  }
+
+  .ant-menu-overflow {
+    line-height: 25px !important;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+
+    .ant-menu-overflow-item {
+      padding-left: 0 !important;
+      padding-right: 32px !important;
+      padding-bottom: 12px !important;
+    }
+    .ant-menu-overflow-item::after {
+      left: 0 !important;
+      right: 32px !important;
+    }
+  }
+}

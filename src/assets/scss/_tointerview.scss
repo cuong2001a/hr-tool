@@ -1,0 +1,25 @@
+.to-interview {
+  height: 100%;
+  &__form {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+  }
+  .submit-btn {
+    margin-top: auto;
+    margin-bottom: 20px !important;
+    button {
+      float: right;
+    }
+  }
+  .ant-form-item-required::before {
+    order: 1;
+    margin-right: 0 !important;
+    margin-left: 4px;
+  }
+}
+
+// Drawer
+.time .ant-picker-date-panel {
+  order: 1 !important;
+}

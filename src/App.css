@@ -1,0 +1,5 @@
+* {
+  font-family: 'Roboto', 'IBM Plex Sans', sans-serif;
+}
+
+@import '~antd/dist/antd.css';

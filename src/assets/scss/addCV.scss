@@ -1,0 +1,12 @@
+.ant-upload-list-item {
+  padding: 0 !important;
+  border: unset !important;
+}
+.ant-upload-list-picture-card-container,
+.ant-upload.ant-upload-select-picture-card {
+  width: 40px !important;
+  height: 40px !important;
+}
+.ant-upload-list-picture-card .ant-upload-list-item-actions {
+  display: none !important;
+}

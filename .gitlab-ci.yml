@@ -1,0 +1,55 @@
+stages:
+  - build
+  - test
+  - product
+  - deploy
+deploy:
+  stage: deploy
+  variables:
+    GIT_STRATEGY: none
+  only:
+    - develop
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $SSH_SERVER_IP >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh $SSH_USER@$SSH_SERVER_IP
+      "rm -rf hr-tool-fe;
+      git clone https://namng:2PRGZXTzs1Wj8P3Jn-4T@gitlab.hivetech.vn/platform/module/hr-tool-fe.git;
+      cd hr-tool-fe;
+      git checkout develop;
+      git pull origin develop;
+      docker build -t $SERVICE_NAME_DEV:1.0 .;
+      docker stop $SERVICE_NAME_DEV;
+      docker rm $SERVICE_NAME_DEV;
+      docker run -d  -it --name $SERVICE_NAME_DEV -h $SERVICE_NAME_DEV  -p 8071:80 $SERVICE_NAME_DEV:1.0;"
+release:
+  stage: product
+  variables:
+    GIT_STRATEGY: none
+  only:
+    - product
+  before_script:
+    - 'command -v ssh-agent >/dev/null || ( apk add --update openssh )' 
+    - eval $(ssh-agent -s)
+    - echo "$SSH_PRIVATE_KEY" | tr -d '\r' | ssh-add -
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - ssh-keyscan $SSH_SERVER_IP >> ~/.ssh/known_hosts
+    - chmod 644 ~/.ssh/known_hosts
+  script:
+    - ssh $SSH_USER@$SSH_SERVER_IP
+      "rm -rf hr-tool-fe;
+      git clone https://namng:2PRGZXTzs1Wj8P3Jn-4T@gitlab.hivetech.vn/platform/module/hr-tool-fe.git;
+      cd hr-tool-fe;
+      git checkout product;
+      git pull origin product;
+      docker build -t $SERVICE_NAME:1.0 .;
+      //docker stop $SERVICE_NAME;
+      //docker rm $SERVICE_NAME;
+      docker run -d  -it --name $SERVICE_NAME -h $SERVICE_NAME  -p 8070:80 $SERVICE_NAME:1.0;"

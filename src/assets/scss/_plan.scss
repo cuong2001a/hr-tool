@@ -1,0 +1,42 @@
+.plan {
+  font-size: 14px;
+  &__header {
+    &--title {
+      font-size: 20px;
+      border-bottom: 1px solid rgb(204, 204, 204, 0.4);
+      padding: 22px 24px;
+    }
+    &--filter {
+      padding: 7px 24px 0;
+    }
+  }
+  .report {
+    margin-left: 24px;
+    padding: 0.8rem;
+    box-shadow: $shadow;
+    border-radius: $radius;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  .btn-function {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .fullscreen-enabled {
+    .ant-table-body {
+      min-height: calc(100vh - 128px) !important;
+    }
+    background-color: #fff !important;
+    .ant-table-wrapper {
+      padding: 1rem;
+    }
+  }
+  td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

@@ -1,0 +1,237 @@
+.cv__managerment {
+  .header-list {
+    box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px 28px 20px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > h3 {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      margin: 0;
+    }
+  }
+  &--content {
+    padding: 18px 16px 50px 24px;
+  }
+  // filter CV management
+  .cv__filter-box {
+    display: flex;
+    flex-wrap: wrap;
+    .box-search__filter {
+      display: flex;
+      input {
+        height: 40px;
+        width: 250px;
+      }
+      button {
+        margin-left: 12px;
+        width: 40px;
+        height: 40px;
+      }
+      .width-152,
+      .filter__assignee {
+        height: 40px;
+        width: 250px;
+        .ant-select-selector {
+          height: 40px !important;
+        }
+      }
+      .filter__assignee {
+        width: 250px;
+      }
+    }
+    .filter-box__items {
+      margin-right: 12px;
+    }
+  }
+  // all css about table
+  .table__content {
+    margin-top: 11px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    padding: 12px 12px 16px 11px;
+
+    &--actions {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      column-gap: 16px;
+      & > span:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--detail {
+      margin-top: 14px;
+
+      .ant-pagination {
+        margin: 0 !important;
+        margin-top: 57px !important;
+      }
+
+      .ant-table-tbody {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .ant-table-cell:last-child {
+    padding: 12px 24px;
+  }
+
+  .table__actions {
+    width: 27px;
+    height: 32px;
+    margin: 0 auto;
+    & > span {
+      display: block;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+      color: rgba(0, 0, 0, 0.5);
+      & > svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  .box {
+    &-button {
+      button {
+        margin: 0 10px;
+      }
+      :first-child {
+        margin-left: 0;
+      }
+      :last-child {
+        margin-right: 0;
+      }
+    }
+    &-history {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      min-height: 70px;
+      box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.05);
+      h2 {
+        margin-bottom: 0;
+      }
+      button {
+        border: 0;
+        margin-right: 18px;
+      }
+    }
+  }
+  .cv {
+    margin-top: 20px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    padding-bottom: 100px;
+    display: flex;
+    &-image {
+      width: 30%;
+      text-align: center;
+      .image-show {
+        img {
+          margin-top: 38px;
+          width: 250px;
+          height: 250px;
+        }
+      }
+      .image-change {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        :nth-child(2n - 1) {
+          margin: 10px 10px;
+        }
+        img {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          :hover {
+            opacity: 0.8;
+          }
+        }
+      }
+      .image-psyco {
+        button {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &-detail {
+      width: 70%;
+      margin-top: 38px;
+      display: flex;
+      justify-content: center;
+      &__left {
+        width: 100%;
+        p {
+          margin: 12px 0;
+        }
+      }
+      &__right {
+        overflow-wrap: break-word;
+        margin-left: 50px;
+      }
+      &__infor {
+        display: flex;
+        align-items: center;
+        // text-align: center;
+        :first-child {
+          min-width: 140px;
+        }
+        p,
+        h4 {
+          margin-top: 12px;
+          margin-bottom: 12px;
+          overflow-wrap: anywhere;
+          // padding-right: 120px;
+          a {
+            text-decoration: underline;
+          }
+        }
+        h4,
+        a {
+          margin-left: 60px;
+          padding: 0 20px;
+        }
+      }
+      &__actions {
+        float: right;
+        margin: 0 auto;
+        margin-right: 42px;
+      }
+    }
+    &-history {
+      margin-top: 45px;
+      box-shadow: -18px 0px 0px -17px rgba(0, 0, 0, 0.06);
+    }
+  }
+
+  .box-list {
+    .table-container__button {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 14px;
+      .icon-table + .icon-table {
+        margin-left: 17px;
+      }
+      .icon-table {
+        cursor: pointer;
+      }
+    }
+    .fullscreen-box {
+      background: #fff;
+      overflow-y: auto;
+    }
+  }
+}
